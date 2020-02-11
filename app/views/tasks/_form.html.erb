@@ -1,0 +1,9 @@
+
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :completed %>
+    <div class="btn btn-primary">
+      <%= f.submit %>
+    </div>
+<% end %>

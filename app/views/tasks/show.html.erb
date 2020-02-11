@@ -1,0 +1,29 @@
+<h1><%= @task.id %> - <%= @task.title %></h1>
+
+<ul>
+  <li>
+    <%= @task.details %>
+
+      <%if @task.completed %>
+        <i class="fas fa-clipboard-check"></i>
+      <% else %>
+        <i class="far fa-clipboard"></i>
+      <% end %>
+    <%= link_to "edit task", edit_path %>
+    <%= link_to "Delete #{@task.title}",
+        task_path(@task),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+  </li>
+
+<%= link_to "Back to tasks list", tasks_path %>
+
+
+</ul>
+
+
+
+
+
+
+
